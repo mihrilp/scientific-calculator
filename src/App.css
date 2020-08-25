@@ -1,0 +1,170 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-sizing: border-box;
+    background: rgba(226,226,226,1);
+    background: -moz-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(226,226,226,1)), color-stop(50%, rgba(219,219,219,1)), color-stop(51%, rgba(209,209,209,1)), color-stop(100%, rgba(254,254,254,1)));
+    background: -webkit-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -o-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+    background: -ms-linear-gradient(left, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.App-header{
+    font-size: 1rem;
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #575656;
+    width: 45%;
+    height: max-content;
+    border-radius: 10px;
+    padding: 30px;
+    -webkit-box-shadow: 7px 11px 21px -12px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 7px 11px 21px -12px rgba(0, 0, 0, 0.75);
+    box-shadow: 7px 11px 21px -12px rgba(0, 0, 0, 0.75);
+}
+
+input {
+    width: 100%;
+    border-radius: 8px;
+    height: 70px;
+    border: none;
+    margin-bottom: 30px;
+    text-align: right;
+    padding-right: 20px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    background-color: #bebcbc;
+    border: 1px solid #3c3c3f;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-top: 18px;
+}
+
+.row button+button {
+    margin-left: 13px;
+}
+
+.firstRow {
+    margin-bottom: 20px;
+}
+
+.firstRow button {
+    width: 16%;
+    height: 40px;
+    border: 0.8px solid black;
+    -webkit-box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.76);
+    box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.76);
+}
+
+.btn-group {
+    width: 41%;
+    margin-right: 13px;
+}
+
+.btn-group button {
+    width: 50%;
+}
+
+.btn-group button:focus, button:visited {
+    width: 50%;
+    background-color: #292929;
+}
+
+.btn-group button:last-child {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: 0px !important;
+}
+
+.btn-group button:not(:last-child) {
+    border-right: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: #292929;
+}
+
+.delete {
+    width: 18%;
+    margin-left: 13px;
+}
+
+.delete button {
+    width: 100%;
+    background-color: #bd0426;
+}
+
+.delete button:hover {
+    background-color: #a50724;
+}
+
+.equal {
+    margin-left: 13px;
+    width: 28%;
+}
+
+.equal button {
+    width: 100%;
+    background-color: #0687b9;
+}
+
+.equal button:hover {
+    background-color: #0b76a0;
+}
+
+button {
+    height: 50px;
+    width: 18%;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #3c3c3e;
+    border: none;
+    color: white;
+    -webkit-box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
+    -moz-box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
+    box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
+    border: 1px solid #2c2c2c;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #302f2f;
+}
+
+.operator {
+    width: 28%;
+    font-size: 18px;
+    color: yellow;
+}
+
+@media  (max-width:640px){
+    .calculator{
+        width: 80%;
+    }
+    .App-header{
+        font-size: 0.8rem;
+    }
+
+}
