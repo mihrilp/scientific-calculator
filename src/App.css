@@ -14,20 +14,29 @@ body {
 .App {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .App-header{
     font-size: 1rem;
     font-family: 'Recursive', sans-serif;
     font-family: 'Ubuntu', sans-serif;
+    align-items: center;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.logo{
+    margin-right: 10px;
 }
 
 .calculator {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #575656;
+    background-color: #2b2b2b;
     width: 45%;
     height: max-content;
     border-radius: 10px;
@@ -46,9 +55,10 @@ input {
     text-align: right;
     padding-right: 20px;
     box-sizing: border-box;
-    font-size: 1.2em;
-    background-color: #bebcbc;
-    border: 1px solid #3c3c3f;
+    font-size: 1.4em;
+    background-color: #4d4d4d;
+    color: #e5e5e5;
+    font-weight: lighter;
 }
 
 .flex-container {
@@ -113,11 +123,7 @@ input {
 
 .delete button {
     width: 100%;
-    background-color: #bd0426;
-}
 
-.delete button:hover {
-    background-color: #a50724;
 }
 
 .equal {
@@ -127,11 +133,11 @@ input {
 
 .equal button {
     width: 100%;
-    background-color: #0687b9;
+    background-color: #e36414;
 }
 
 .equal button:hover {
-    background-color: #0b76a0;
+    background-color: #b85314;
 }
 
 button {
@@ -156,7 +162,6 @@ button:hover {
 .operator {
     width: 28%;
     font-size: 18px;
-    color: yellow;
 }
 
 @media  (max-width:640px){

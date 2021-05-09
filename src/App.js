@@ -1,21 +1,28 @@
-import React, { useState, useEffect } from 'react';
-import './App.css';
-import usePrevious from './hooks/usePrevious'
-import useIsMount from './hooks/useIsMount'
-import { MyContext } from './MyContext';
-import Input from './components/Input';
-import { Button, ClearButton, DeleteButton, BackButton, ForwardButton, RadButton, DegButton } from './components/Buttons';
-import AnsButton from './components/AnsButton';
-import Operator from './components/Operator';
-import EqualButton from './components/EqualButton';
-import * as Icons from './components/icons';
-
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import usePrevious from "./hooks/usePrevious";
+import useIsMount from "./hooks/useIsMount";
+import { MyContext } from "./MyContext";
+import Input from "./components/Input";
+import {
+  Button,
+  ClearButton,
+  DeleteButton,
+  BackButton,
+  ForwardButton,
+  RadButton,
+  DegButton,
+} from "./components/Buttons";
+import AnsButton from "./components/AnsButton";
+import Operator from "./components/Operator";
+import EqualButton from "./components/EqualButton";
+import * as Icons from "./components/icons";
 
 function App() {
   const [userInput, setUserInput] = useState("");
   const [stack, setStack] = useState([]);
   const [removed, setRemoved] = useState([]);
-  const prevInput = usePrevious(userInput)
+  const prevInput = usePrevious(userInput);
   const isMount = useIsMount();
 
   function getDifference(str1, str2) {
@@ -24,27 +31,27 @@ function App() {
     var diff = "";
 
     while (j < str2.length) {
-      if (str1[i] !== str2[j] || i === str1.length)
-        diff += str2[j];
-      else
-        i++;
+      if (str1[i] !== str2[j] || i === str1.length) diff += str2[j];
+      else i++;
       j++;
     }
     return diff;
   }
 
   useEffect(() => {
-    if (isMount)
-      console.log('First Render');
+    if (isMount) console.log("First Render");
     else {
-      stack.push(getDifference(prevInput, userInput))
+      stack.push(getDifference(prevInput, userInput));
     }
-  }, [userInput])
+  }, [userInput]);
 
   return (
-    <MyContext.Provider value={{ userInput, setUserInput, stack, setStack, removed, setRemoved }}>
+    <MyContext.Provider
+      value={{ userInput, setUserInput, stack, setStack, removed, setRemoved }}
+    >
       <div className="App">
         <header className="App-header">
+          <Icons.Calculator className="logo" />
           <h1>Scientific Calculator</h1>
         </header>
         <div className="calculator">
@@ -59,8 +66,12 @@ function App() {
               <ForwardButton name={<Icons.Next />} />
               <AnsButton name="Ans" />
               <ClearButton name="AC" />
-              <div className="delete" ><DeleteButton name={<Icons.Backspace />} /></div>
-              <div className="equal" ><EqualButton name={<Icons.Equal />} /></div>
+              <div className="delete">
+                <DeleteButton name={<Icons.Backspace />} />
+              </div>
+              <div className="equal">
+                <EqualButton name={<Icons.Equal />} />
+              </div>
             </div>
             <div className="row">
               <Button name="(" />

@@ -7,7 +7,7 @@ function SvgPlus(props) {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M9 11v9h2v-9h9V9h-9V0H9v9H0v2h9z"
-        fill="yellow"
+        fill="#e36414"
       />
     </svg>
   );
