@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { MyContext } from "../MyContext";
+import { MyContext } from "../../MyContext";
 
 export function Button({ name, type }) {
   const { userInput, setUserInput } = useContext(MyContext);

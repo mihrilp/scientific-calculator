@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
 import usePrevious from "./hooks/usePrevious";
 import useIsMount from "./hooks/useIsMount";
 import { MyContext } from "./MyContext";
@@ -12,7 +13,7 @@ import {
   ForwardButton,
   RadButton,
   DegButton,
-} from "./components/Buttons";
+} from "./components/buttons/Buttons";
 import AnsButton from "./components/AnsButton";
 import Operator from "./components/Operator";
 import EqualButton from "./components/EqualButton";
@@ -49,73 +50,152 @@ function App() {
     <MyContext.Provider
       value={{ userInput, setUserInput, stack, setStack, removed, setRemoved }}
     >
-      <div className="App">
-        <header className="App-header">
+      <Container className="App">
+        <Row className="App-header">
           <Icons.Calculator className="logo" />
           <h1>Scientific Calculator</h1>
-        </header>
-        <div className="calculator">
-          <Input />
-          <div className="flex-container">
-            <div className="row firstRow">
-              <div className="btn-group">
-                <RadButton name="Rad" />
-                <DegButton name="Deg" />
-              </div>
-              <BackButton name={<Icons.Back />} />
-              <ForwardButton name={<Icons.Next />} />
-              <AnsButton name="Ans" />
-              <ClearButton name="AC" />
-              <div className="delete">
-                <DeleteButton name={<Icons.Backspace />} />
-              </div>
-              <div className="equal">
-                <EqualButton name={<Icons.Equal />} />
-              </div>
-            </div>
-            <div className="row">
-              <Button name="(" />
-              <Button name=")" />
-              <Button name="," />
-              <Button name="e" />
-              <Button name="7" />
-              <Button name="8" />
-              <Button name="9" />
-              <Operator name={<Icons.Divide />} type="divide" />
-            </div>
-            <div className="row">
-              <Button name={<Icons.Pi />} type="pi" />
-              <Button name="log" type="func" />
-              <Button name={<Icons.XDegreeSquare />} type="degreesqr" />
-              <Button name={<Icons.SquareRoot />} type="sqrt" />
-              <Button name="4" />
-              <Button name="5" />
-              <Button name="6" />
-              <Operator name={<Icons.Multiplication />} type="mul" />
-            </div>
-            <div className="row">
-              <Button name={<Icons.XDegreeCube />} type="degreecube" />
-              <Button name={<Icons.CubeRoot />} type="cbrt" />
-              <Button name={<Icons.XPowerN />} type="xpowern" />
-              <Button name={<Icons.NthRoot />} type="nthrt" />
-              <Button name="1" />
-              <Button name="2" />
-              <Button name="3" />
-              <Operator name={<Icons.Minus />} type="minus" />
-            </div>
-            <div className="row">
-              <Button name="sin" type="func" />
-              <Button name="cos" type="func" />
-              <Button name="tan" type="func" />
-              <Button name={<Icons.TenPowerX />} type="tenpowerx" />
-              <Button name="%" />
-              <Button name="0" />
-              <Button name="." />
-              <Operator name={<Icons.Plus />} type="plus" />
-            </div>
-          </div>
-        </div>
-      </div>
+        </Row>
+        <Row className="calculator">
+          <Col>
+            <Row>
+              <Col>
+                <Input />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <Row>
+                  <Col className="btn-group">
+                    <RadButton name="Rad" />
+                    <DegButton name="Deg" />
+                  </Col>
+                  <Col>
+                    <BackButton name={<Icons.Back />} />
+                  </Col>
+                  <Col>
+                    <ForwardButton name={<Icons.Next />} />
+                  </Col>
+                  <Col>
+                    <AnsButton name="Ans" />
+                  </Col>
+                  <Col>
+                    <ClearButton name="AC" />
+                  </Col>
+                  <Col className="delete">
+                    <DeleteButton name={<Icons.Backspace />} />
+                  </Col>
+                  <Col className="equal">
+                    <EqualButton name={<Icons.Equal />} />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Button name="(" />
+                  </Col>
+                  <Col>
+                    <Button name=")" />
+                  </Col>
+                  <Col>
+                    <Button name="," />
+                  </Col>
+                  <Col>
+                    <Button name="e" />
+                  </Col>
+                  <Col>
+                    <Button name="7" />
+                  </Col>
+                  <Col>
+                    <Button name="8" />
+                  </Col>
+                  <Col>
+                    <Button name="9" />
+                  </Col>
+                  <Col>
+                    <Operator name={<Icons.Divide />} type="divide" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Button name={<Icons.Pi />} type="pi" />
+                  </Col>
+                  <Col>
+                    <Button name="log" type="func" />
+                  </Col>
+                  <Col>
+                    <Button name={<Icons.XDegreeSquare />} type="degreesqr" />
+                  </Col>
+                  <Col>
+                    <Button name={<Icons.SquareRoot />} type="sqrt" />
+                  </Col>
+                  <Col>
+                    <Button name="4" />
+                  </Col>
+                  <Col>
+                    <Button name="5" />
+                  </Col>
+                  <Col>
+                    <Button name="6" />
+                  </Col>
+                  <Col>
+                    <Operator name={<Icons.Multiplication />} type="mul" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Button name={<Icons.XDegreeCube />} type="degreecube" />
+                  </Col>
+                  <Col>
+                    <Button name={<Icons.CubeRoot />} type="cbrt" />
+                  </Col>
+                  <Col>
+                    <Button name={<Icons.XPowerN />} type="xpowern" />
+                  </Col>
+                  <Col>
+                    <Button name={<Icons.NthRoot />} type="nthrt" />
+                  </Col>
+                  <Col>
+                    <Button name="1" />
+                  </Col>
+                  <Col>
+                    {" "}
+                    <Button name="2" />
+                  </Col>
+                  <Col>
+                    <Button name="3" />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <Button name="sin" type="func" />
+                  </Col>
+                  <Col>
+                    <Button name="cos" type="func" />
+                  </Col>
+                  <Col>
+                    {" "}
+                    <Button name="tan" type="func" />
+                  </Col>
+                  <Col>
+                    <Button name={<Icons.TenPowerX />} type="tenpowerx" />
+                  </Col>
+                  <Col>
+                    <Button name="%" />
+                  </Col>
+                  <Col>
+                    <Button name="0" />
+                  </Col>
+                  <Col>
+                    <Button name="." />
+                  </Col>
+                  <Col>
+                    <Operator name={<Icons.Plus />} type="plus" />
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
     </MyContext.Provider>
   );
 }
