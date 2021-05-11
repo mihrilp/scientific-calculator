@@ -1,0 +1,8 @@
+ .equal {
+    width: 14vh;
+    background-color: #e36414;
+}
+
+.equal:hover {
+    background-color: #b85314;
+}

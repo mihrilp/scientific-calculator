@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Col } from "react-bootstrap";
 import usePrevious from "./hooks/usePrevious";
 import useIsMount from "./hooks/useIsMount";
 import { MyContext } from "./MyContext";
-import Input from "./components/Input";
+import Input from "./components/input/Input";
 import {
   Button,
   ClearButton,
@@ -15,8 +16,8 @@ import {
   DegButton,
 } from "./components/buttons/Buttons";
 import AnsButton from "./components/AnsButton";
-import Operator from "./components/Operator";
-import EqualButton from "./components/EqualButton";
+import Operator from "./components/operator/Operator";
+import EqualButton from "./components/equal-button/EqualButton";
 import * as Icons from "./components/icons";
 
 function App() {
@@ -52,21 +53,23 @@ function App() {
     >
       <Container className="App">
         <Row className="App-header">
-          <Icons.Calculator className="logo" />
-          <h1>Scientific Calculator</h1>
+          <p>
+            <Icons.Calculator className="logo" />
+            Scientific Calculator
+          </p>
         </Row>
         <Row className="calculator">
           <Col>
             <Row>
-              <Col>
-                <Input />
-              </Col>
+              <Input />
             </Row>
             <Row>
               <Col>
-                <Row>
-                  <Col className="btn-group">
+                <Row className="firstRow">
+                  <Col>
                     <RadButton name="Rad" />
+                  </Col>
+                  <Col>
                     <DegButton name="Deg" />
                   </Col>
                   <Col>
@@ -84,7 +87,7 @@ function App() {
                   <Col className="delete">
                     <DeleteButton name={<Icons.Backspace />} />
                   </Col>
-                  <Col className="equal">
+                  <Col>
                     <EqualButton name={<Icons.Equal />} />
                   </Col>
                 </Row>
@@ -102,13 +105,13 @@ function App() {
                     <Button name="e" />
                   </Col>
                   <Col>
-                    <Button name="7" />
+                    <Button name="7" className="number" />
                   </Col>
                   <Col>
-                    <Button name="8" />
+                    <Button name="8" className="number" />
                   </Col>
                   <Col>
-                    <Button name="9" />
+                    <Button name="9" className="number" />
                   </Col>
                   <Col>
                     <Operator name={<Icons.Divide />} type="divide" />
@@ -128,13 +131,13 @@ function App() {
                     <Button name={<Icons.SquareRoot />} type="sqrt" />
                   </Col>
                   <Col>
-                    <Button name="4" />
+                    <Button name="4" className="number" />
                   </Col>
                   <Col>
-                    <Button name="5" />
+                    <Button name="5" className="number" />
                   </Col>
                   <Col>
-                    <Button name="6" />
+                    <Button name="6" className="number" />
                   </Col>
                   <Col>
                     <Operator name={<Icons.Multiplication />} type="mul" />
@@ -154,14 +157,16 @@ function App() {
                     <Button name={<Icons.NthRoot />} type="nthrt" />
                   </Col>
                   <Col>
-                    <Button name="1" />
+                    <Button name="1" className="number" />
                   </Col>
                   <Col>
-                    {" "}
-                    <Button name="2" />
+                    <Button name="2" className="number" />
                   </Col>
                   <Col>
-                    <Button name="3" />
+                    <Button name="3" className="number" />
+                  </Col>
+                  <Col>
+                    <Operator name={<Icons.Minus />} type="plus" />
                   </Col>
                 </Row>
                 <Row>
@@ -172,7 +177,6 @@ function App() {
                     <Button name="cos" type="func" />
                   </Col>
                   <Col>
-                    {" "}
                     <Button name="tan" type="func" />
                   </Col>
                   <Col>
@@ -182,7 +186,7 @@ function App() {
                     <Button name="%" />
                   </Col>
                   <Col>
-                    <Button name="0" />
+                    <Button name="0" className="number" />
                   </Col>
                   <Col>
                     <Button name="." />

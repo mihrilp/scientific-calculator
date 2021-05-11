@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import "./button.css";
 import { MyContext } from "../../MyContext";
 
 export function Button({ name, type }) {

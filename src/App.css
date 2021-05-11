@@ -20,12 +20,12 @@ body {
 }
 
 .App-header{
-    font-size: 1rem;
+    font-size: 35px;
     font-family: 'Recursive', sans-serif;
     font-family: 'Ubuntu', sans-serif;
     align-items: center;
     display: flex;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .logo{
@@ -41,129 +41,18 @@ body {
     box-shadow: 7px 11px 21px -12px rgba(0, 0, 0, 0.75);
 }
 
-input {
-    border-radius: 8px;
-    height: 70px;
-    border: none;
-    margin-bottom: 30px;
-    text-align: right;
-    padding-right: 20px;
-    box-sizing: border-box;
-    font-size: 1.4em;
-    background-color: #333333;
-    color: #e5e5e5;
-    font-weight: lighter;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: column;
-}
-
-.row {
-    display: flex;
-    flex-direction: row;
-    margin-top: 18px;
-}
-
-.row button+button {
-    margin-left: 13px;
-}
-
 .firstRow {
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .firstRow button {
-    width: 16%;
-    height: 40px;
+    height: 45px;
     border: 0.8px solid black;
     -webkit-box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.76);
     -moz-box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.76);
     box-shadow: 1px 1px 1px -1px rgba(0,0,0,0.76);
 }
 
-.btn-group {
-    width: 41%;
-    margin-right: 13px;
-}
-
-.btn-group button {
-    width: 48%;
-}
-
-.btn-group button:focus, button:visited {
-    width: 48%;
-    background-color: #252527;
-}
-
-.btn-group button:last-child {
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    margin-left: 0px !important;
-}
-
-.btn-group button:not(:last-child) {
-    border-right: none;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-    background-color: #252527;
-}
-
-.delete {
-    width: 18%;
-    margin-left: 13px;
-}
-
-.delete button {
-    width: 100%;
-
-}
-
-.equal {
-    margin-left: 13px;
-    width: 28%;
-}
-
-.equal button {
-    width: 100%;
-    background-color: #e36414;
-}
-
-.equal button:hover {
-    background-color: #b85314;
-}
-
-button {
-    height: 50px;
-    width: 18%;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #252527;
-    border: none;
-    color: white;
-    -webkit-box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
-    -moz-box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
-    box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
-    border: 1px solid #2c2c2c;
-}
-
-button:hover {
-    cursor: pointer;
-    background-color: #302f2f;
-}
-
-.operator {
-    width: 28%;
-    font-size: 18px;
-}
-
-@media  (max-width:640px){
-    .calculator{
-        width: 80%;
-    }
-    .App-header{
-        font-size: 0.8rem;
-    }
-
+.number{
+    font-weight: bold;
 }
