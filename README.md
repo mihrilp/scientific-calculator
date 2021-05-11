@@ -10,7 +10,7 @@
  I build a scientific calculator with **React hooks** and **flexbox**. And i used **math.js** and **svgr** while designing.
 <br><br>
 ## Demo
-<img max-width=100% height="500px" src="https://user-images.githubusercontent.com/58886855/91218526-d9121780-e721-11ea-9f01-f0d92ab4f4de.png"/>
+![React App — Firefox Developer Edition 5_11_2021 3_56_15 AM](https://user-images.githubusercontent.com/58886855/117742236-f550d880-b20c-11eb-9862-3882458ba12b.png)
 
 ## Available Scripts
 
