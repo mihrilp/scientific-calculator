@@ -1,19 +1,19 @@
 button {
-    height: 50px;
-    width: 9vh;
-    font-size: 16px;
-    border-radius: 5px;
-    background-color: #252527;
-    border: none;
-    color: white;
-    margin-top: 18px;
-    -webkit-box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
-    -moz-box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
-    box-shadow: 1px 1.5px 1px -1px rgba(0,0,0,0.76);
-    border: 1px solid #2c2c2c;
+  height: 50px;
+  width: 9vh;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  border: none;
+  color: white;
+  margin-top: 18px;
+  -webkit-box-shadow: 1px 1.5px 1px -1px rgba(0, 0, 0, 0.76);
+  -moz-box-shadow: 1px 1.5px 1px -1px rgba(0, 0, 0, 0.76);
+  box-shadow: 1px 1.5px 1px -1px rgba(0, 0, 0, 0.76);
+  border: 1px solid #2f2f2f;
 }
 
 button:hover {
-    cursor: pointer;
-    background-color: #302f2f;
+  cursor: pointer;
+  background-color: #302f2f;
 }
